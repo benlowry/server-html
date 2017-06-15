@@ -1,0 +1,2 @@
+Server Page is public domain.  3rd party node modules it depends on
+are not included in this license.
