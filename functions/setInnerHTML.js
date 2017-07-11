@@ -6,6 +6,6 @@ function setInnerHTML (element, html) {
   if (!element) {
     return null
   }
-
-  element.child = [html2json.html2json(html)]
+  const json = html2json.html2json(html)
+  element.child = json.child
 }
