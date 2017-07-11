@@ -12,6 +12,7 @@ const removeElement = require('./functions/removeElement.js')
 const removeElementById = require('./functions/removeElementById.js')
 const removeElementsById = require('./functions/removeElementsById.js')
 const setAttribute = require('./functions/setAttribute.js')
+const setInnerHTML = require('./functions/setInnerHTML.js')
 const setInnerText = require('./functions/setInnerText.js')
 const classList = {
   add: require('./functions/classList/add.js'),
@@ -76,6 +77,9 @@ function addDOMFunctions (el) {
   }
   el.setInnerText = (elementid, message) => {
     return setInnerText(el, elementid, message)
+  }
+  el.setInnerHTML = (elementid, html) => {
+    return setInnerHTML(el, elementid, html)
   }
   el.toString = () => {
     return toString(el)
