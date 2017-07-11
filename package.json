@@ -1,6 +1,6 @@
 {
   "name": "server-html",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "A lightweight HTML parser with partial DOM and helper methods for working with HTML pages on your server",
   "main": "index.js",
   "scripts": {
