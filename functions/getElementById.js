@@ -13,6 +13,17 @@ function getElementById (element, targetid) {
       if (child && child.attr && child.attr.id === targetid) {
         return child
       }
+      if (child && child.tag && (
+        // tags that cannot have children
+        child.tag === 'area' || child.tag === 'base' || child.tag === 'br' ||
+        child.tag === 'col' || child.tag === 'embed' || child.tag === 'hr' ||
+        child.tag === 'img' || child.tag === 'keygen' || child.tag === 'link' ||
+        child.tag === 'meta' || child.tag === 'param' || child.tag === 'source' ||
+        child.tag === 'track' || child.tag === 'wbr' || 
+        // inactive content
+        child.tag === 'template' || child.tag === 'iframe')) {
+        continue
+      }
       if (child && child.child && child.child.length > 0) {
         const nested = getElementById(child, targetid)
         if (nested) {
