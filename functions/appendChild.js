@@ -5,7 +5,8 @@ function appendChild (element, child) {
     return null
   }
   if (!element.child) {
-    element.child = [].push()
+    element.child = [child]
+    return
   }
   return element.child.push(child)
 }

@@ -133,7 +133,7 @@ function stripLineBreaks (element) {
   if (element.tag === 'script' || element.tag === 'textarea' || element.tag === 'pre' || element.tag === 'code') {
     return
   }
-  if (element.child) {
+  if (element.child && element.child.length) {
     for (let i = element.child.length - 1; i > -1; i--) {
       const node = element.child[i]
       if (node.node === 'text') {
