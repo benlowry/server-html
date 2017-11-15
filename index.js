@@ -48,7 +48,7 @@ function toString (doc) {
     return null
   }
   if (doc.substring) {
-    return null
+    return doc
   }
   return html2json.json2html(doc)
 }
@@ -56,6 +56,7 @@ function toString (doc) {
 function addDOMFunctions (el) {
   if (el.child) {
     for (const child of el.child) {
+      child.parentNode = el
       if (child.node === 'element') {
         addDOMFunctions(child)
       }
